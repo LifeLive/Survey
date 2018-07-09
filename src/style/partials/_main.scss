@@ -1,0 +1,158 @@
+/***** ---  CUSTOM STYLE START  --- ****/
+.tab-content {
+  border: 0px;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px 0;
+  background: $gray-100;
+  margin-top: 70px;
+  border-radius: 5px;
+
+  .nav-tabs {
+    position: relative;
+    border: none;
+    overflow: hidden;
+    margin: 0 20px;
+    @include media-breakpoint-down(xs) {
+      display: block;
+    }
+    .nav-item {
+      margin-bottom: 0;
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .nav-link {
+    position: relative;
+    padding: 0;
+    border: 0;
+
+    &:before {
+      content: " ";
+      display: block;
+      position: absolute;
+      background-color: $gray-600;
+      margin-top: -1px;
+      height: 2px;
+      top: 50%;
+      right: 100%;
+      width: 1140px;
+      pointer-events: none;
+    }
+    span {
+      font-size: 25px;
+      position: relative;
+      z-index: 10;
+      color: $gray-600;
+      background-color: $white;
+      display: block;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      border: 2px solid $gray-600;
+      border-radius: 100%;
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+    &.active {
+      background-color: transparent;
+      span {
+        background-color: $blue;
+        border-color: $blue;
+        color: white;
+      }
+      &:before {
+        background-color: $blue;
+        z-index: 3;
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+
+    }
+
+    &.complete {
+      span {
+        background-color: $blue;
+        border-color: $blue;
+        color: $white;
+      }
+
+    }
+  }
+  .tab-content {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: $gray-200;
+  }
+  .tab-pane {
+    position: relative;
+  }
+
+  .buttons {
+    margin-top: 50px;
+    @include media-breakpoint-down(xs) {
+      display: block;
+    }
+    button {
+      padding: .7rem 0;
+      display: block;
+      width: 200px;
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.figure {
+  margin-bottom: 20px;
+  &.checked {
+    img {
+      outline: 2px solid $red;
+    }
+  }
+}
+
+.figure-caption {
+  text-align: center;
+  font-weight: bold;
+  color: darken($orange, 15%);
+  margin: 10px 0;
+}
+
+.title {
+  font-size: 18px;
+  color: darken($blue, 30%);
+  margin-bottom: 50px;
+}
+
+.balance {
+  text-align: center;
+  font-size: 14px;
+  display: block;
+  color: darken($blue, 30%);;
+}
+
+.result-content-holder {
+  .result-title{
+    text-align: center;
+    @extend .title;
+  }
+  margin-top: 30px;
+  .figure {
+    margin: 0 20px 20px 0;
+    &.checked {
+      img {
+        outline: none;
+      }
+    }
+
+  }
+}
