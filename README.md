@@ -1,4 +1,4 @@
-# APPII.io
+# Survey
 1. Run `npm i`
 2. Run `gulp default` to start development mode. Project will be available at `localhost:3000`
 ```
